@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: Downloading ngrok
         run: |
-          Invoke-WebRequest https://raw.githubusercontent.com/ku-cluster/lmao/main/resources/ngrok.zip -OutFile ngrok.zip
-          Invoke-WebRequest https://raw.githubusercontent.com/ku-cluster/lmao/main/resources/start.bat -OutFile start.bat
+          Invoke-WebRequest https://raw.githubusercontent.com/kucse-cluster/lmao/main/resources/ngrok.zip -OutFile ngrok.zip
+          Invoke-WebRequest https://raw.githubusercontent.com/kucse-cluster/lmao/main/resources/start.bat -OutFile start.bat
 
       - name: Extracting ngrok Files
         run: Expand-Archive ngrok.zip
@@ -34,5 +34,5 @@ jobs:
 
       - name: TimeCount
         run: |
-          Invoke-WebRequest https://raw.githubusercontent.com/ku-cluster/lmao/main/resources/loop.ps1 -OutFile loop.ps1
+          Invoke-WebRequest https://raw.githubusercontent.com/kucse-cluster/lmao/main/resources/loop.ps1 -OutFile loop.ps1
           ./loop.ps1
